@@ -73,6 +73,7 @@ function Index() {
             Train <span className="text-stroke-blood">Like</span><br/>
             You <span className="text-blood">Mean</span> It.
           </h1>
+          <p className="mt-6 text-sm uppercase tracking-[0.3em] text-bone/80">Coached by Dima Varec — <span className="text-blood font-bold">World Champion</span></p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
             <a href="#contact" className="px-8 py-4 bg-blood text-bone text-sm uppercase tracking-widest font-bold hover:translate-x-1 transition">
               Start Training →
@@ -157,21 +158,25 @@ function Index() {
             <h2 className="mt-4 font-display text-5xl md:text-7xl leading-none">
               Dima<br/><span className="text-stroke-blood">Varec.</span>
             </h2>
+            <div className="mt-6 inline-flex items-center gap-3 border border-blood px-4 py-2">
+              <span className="text-blood">★</span>
+              <span className="text-xs uppercase tracking-[0.3em] font-bold">World Champion</span>
+            </div>
             <p className="mt-8 text-lg text-muted-foreground leading-relaxed">
-              A rare combination of professionalism, deep knowledge and genuine personal involvement. No matter your age, goals, or fitness level — every program is tailored, focused and effective.
+              World champion fighter and head coach. A rare combination of professionalism, deep knowledge and genuine personal involvement. No matter your age, goals, or fitness level — every program is tailored, focused and effective.
             </p>
             <div className="mt-10 grid grid-cols-3 gap-6 border-t border-border pt-8">
               <div>
-                <div className="font-display text-4xl text-blood">10+</div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">Years Coaching</div>
+                <div className="font-display text-4xl text-blood">WC</div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">World Champion</div>
               </div>
               <div>
                 <div className="font-display text-4xl text-blood">5.0</div>
                 <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">Google Rating</div>
               </div>
               <div>
-                <div className="font-display text-4xl text-blood">All</div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">Levels Welcome</div>
+                <div className="font-display text-4xl text-blood">10+</div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">Years Coaching</div>
               </div>
             </div>
           </div>
