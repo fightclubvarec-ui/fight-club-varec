@@ -1,9 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-fighter.jpg";
+import heroImg from "@/assets/coach-real.jpg";
 import glovesImg from "@/assets/gloves.jpg";
 import kidsImg from "@/assets/kids-class.jpg";
 import bagImg from "@/assets/heavybag.jpg";
-import coachImg from "@/assets/coach.jpg";
+import coachImg from "@/assets/coach-real.jpg";
+import gymWallImg from "@/assets/gym-wall.jpg";
+import posterImg from "@/assets/poster-coaches.jpg";
+import bannerImg from "@/assets/banner-programs.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -11,9 +14,11 @@ export const Route = createFileRoute("/")({
 
 const programs = [
   { tag: "01", title: "Muay Thai", desc: "The art of eight limbs. Punches, elbows, knees and kicks taught by an experienced fighter.", img: glovesImg },
-  { tag: "02", title: "Kickboxing", desc: "Sharpen striking, footwork and conditioning. All levels welcome.", img: bagImg },
-  { tag: "03", title: "Kids Program", desc: "Build discipline, confidence and respect. Safe, structured classes for ages 6–14.", img: kidsImg },
-  { tag: "04", title: "Self-Defense", desc: "Real-world tactics drawing from wrestling, jiu-jitsu and street scenarios.", img: heroImg },
+  { tag: "02", title: "MMA", desc: "Mixed martial arts blending striking, clinch and ground game. Build a complete fighter's toolkit.", img: bannerImg },
+  { tag: "03", title: "Brazilian Jiu-Jitsu", desc: "Leverage, technique and control. Learn to dominate on the ground — gi and no-gi.", img: gymWallImg },
+  { tag: "04", title: "Kickboxing", desc: "Sharpen striking, footwork and conditioning. All levels welcome.", img: bagImg },
+  { tag: "05", title: "Kids Program", desc: "Build discipline, confidence and respect. Safe, structured classes for ages 6–14.", img: kidsImg },
+  { tag: "06", title: "Self-Defense & Fitboxing", desc: "Real-world tactics and high-energy conditioning. For every body, every goal.", img: posterImg },
 ];
 
 const reviews = [
@@ -125,7 +130,7 @@ function Index() {
           </a>
 
           {programs.slice(1).map((p) => (
-            <a key={p.title} href="#contact" className="group relative md:col-span-5 aspect-[16/10] overflow-hidden bg-card">
+            <a key={p.title} href="#contact" className="group relative md:col-span-5 lg:col-span-5 aspect-[16/10] overflow-hidden bg-card">
               <img src={p.img} alt={p.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-700" />
               <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent" />
               <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
