@@ -195,6 +195,54 @@ function Index() {
         </div>
       </section>
 
+      {/* TITLES & ACCOLADES */}
+      <section id="titles" className="py-32 md:py-48 max-w-7xl mx-auto px-6">
+        <div className="grid md:grid-cols-12 gap-8 mb-16 items-end">
+          <div className="md:col-span-7">
+            <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">/ Titles & Accolades</span>
+            <h2 className="mt-4 font-display text-5xl md:text-7xl leading-none">
+              A Decade of<br/><span className="text-stroke-blood">Championships.</span>
+            </h2>
+          </div>
+          <p className="md:col-span-5 text-muted-foreground text-lg leading-relaxed">
+            From IFMA World stages to WBC Muay Thai gold — Coach Dzmitry brings real championship experience to every class.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-12 gap-4">
+          <div className="md:col-span-7 border border-border bg-card">
+            <div className="px-6 py-4 border-b border-border flex items-center justify-between">
+              <span className="font-display uppercase text-blood text-sm">Professional</span>
+              <span className="text-xs uppercase tracking-widest text-muted-foreground">Pro Titles</span>
+            </div>
+            <ul>
+              {titles.map((t) => (
+                <li key={t.year + t.org} className="grid grid-cols-12 gap-4 px-6 py-5 border-b border-border last:border-b-0 hover:bg-background/50 transition">
+                  <span className="col-span-2 font-display text-blood text-xl">{t.year}</span>
+                  <span className="col-span-4 text-xs uppercase tracking-widest text-muted-foreground self-center">{t.org}</span>
+                  <span className="col-span-6 text-foreground self-center">{t.title}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="md:col-span-5 border border-border bg-card">
+            <div className="px-6 py-4 border-b border-border flex items-center justify-between">
+              <span className="font-display uppercase text-blood text-sm">Amateur</span>
+              <span className="text-xs uppercase tracking-widest text-muted-foreground">IFMA · WCG</span>
+            </div>
+            <ul className="p-6 space-y-3">
+              {amateur.map((a) => (
+                <li key={a} className="flex items-start gap-3 text-sm leading-relaxed">
+                  <span className="w-1.5 h-1.5 bg-blood mt-2 shrink-0" />
+                  <span>{a}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* COACH */}
       <section id="coach" className="bg-card border-y border-border">
         <div className="max-w-7xl mx-auto px-6 py-32 md:py-48 grid md:grid-cols-12 gap-16 items-center">
