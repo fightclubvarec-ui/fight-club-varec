@@ -37,6 +37,29 @@ const schedule = [
   { day: "Saturday", classes: ["Open Mat — 10:00 AM", "Self-Defense — 11:30 AM"] },
 ];
 
+const titles = [
+  { year: "2026", org: "WBC Muay Thai", title: "Nai Khanomtom Welterweight Champion" },
+  { year: "2025", org: "Warrior's Cup (WCMT)", title: "Welterweight Champion" },
+  { year: "2024", org: "Warrior's Cup (WCMT)", title: "Welterweight Champion (×2)" },
+  { year: "2019", org: "Golden Fight Tournament", title: "Tournament Champion" },
+  { year: "2015", org: "Top King World Series", title: "-70 kg Tournament Champion" },
+  { year: "2014", org: "W5 Grand Prix", title: "-66 kg Tournament Champion (Kickboxing)" },
+];
+
+const amateur = [
+  "2022 IFMA European Championships -67kg",
+  "2021 IFMA World Championships -67kg",
+  "2019 IFMA World & European Championships -67kg",
+  "2018 / 2017 IFMA World Championships -67kg",
+  "2016 IFMA-EMF European Championships -67kg",
+  "2014 IFMA World & European Championships -63.5kg",
+  "2013 IFMA World & European Championships -63.5kg",
+  "2013 World Combat Games -63.5kg",
+  "2012 / 2011 IFMA European Championships",
+  "2010 IFMA World Championships -60kg",
+  "2008 Power of Scotland — Runner-Up",
+];
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground bg-grain">
@@ -162,12 +185,60 @@ function Index() {
             </p>
             <div className="mt-8 flex gap-4">
               <a href="https://www.facebook.com/dzmitry.varats" target="_blank" rel="noreferrer" className="px-6 py-3 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Facebook</a>
-              <a href="https://www.instagram.com/dzmitry.varats" target="_blank" rel="noreferrer" className="px-6 py-3 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Instagram</a>
+              <a href="https://www.instagram.com/fight_club_philly?igsh=MWJhMGNkNGEwaDdwbA==" target="_blank" rel="noreferrer" className="px-6 py-3 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Instagram</a>
             </div>
           </div>
           <div className="md:col-span-7 relative">
             <div className="absolute -top-4 -right-4 w-full h-full border-2 border-blood" />
             <img src={championImg} alt="Dzmitry Varats holding WBC Muay Thai championship belt" loading="lazy" className="relative w-full aspect-[4/5] object-cover object-top" />
+          </div>
+        </div>
+      </section>
+
+      {/* TITLES & ACCOLADES */}
+      <section id="titles" className="py-32 md:py-48 max-w-7xl mx-auto px-6">
+        <div className="grid md:grid-cols-12 gap-8 mb-16 items-end">
+          <div className="md:col-span-7">
+            <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">/ Titles & Accolades</span>
+            <h2 className="mt-4 font-display text-5xl md:text-7xl leading-none">
+              A Decade of<br/><span className="text-stroke-blood">Championships.</span>
+            </h2>
+          </div>
+          <p className="md:col-span-5 text-muted-foreground text-lg leading-relaxed">
+            From IFMA World stages to WBC Muay Thai gold — Coach Dzmitry brings real championship experience to every class.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-12 gap-4">
+          <div className="md:col-span-7 border border-border bg-card">
+            <div className="px-6 py-4 border-b border-border flex items-center justify-between">
+              <span className="font-display uppercase text-blood text-sm">Professional</span>
+              <span className="text-xs uppercase tracking-widest text-muted-foreground">Pro Titles</span>
+            </div>
+            <ul>
+              {titles.map((t) => (
+                <li key={t.year + t.org} className="grid grid-cols-12 gap-4 px-6 py-5 border-b border-border last:border-b-0 hover:bg-background/50 transition">
+                  <span className="col-span-2 font-display text-blood text-xl">{t.year}</span>
+                  <span className="col-span-4 text-xs uppercase tracking-widest text-muted-foreground self-center">{t.org}</span>
+                  <span className="col-span-6 text-foreground self-center">{t.title}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="md:col-span-5 border border-border bg-card">
+            <div className="px-6 py-4 border-b border-border flex items-center justify-between">
+              <span className="font-display uppercase text-blood text-sm">Amateur</span>
+              <span className="text-xs uppercase tracking-widest text-muted-foreground">IFMA · WCG</span>
+            </div>
+            <ul className="p-6 space-y-3">
+              {amateur.map((a) => (
+                <li key={a} className="flex items-start gap-3 text-sm leading-relaxed">
+                  <span className="w-1.5 h-1.5 bg-blood mt-2 shrink-0" />
+                  <span>{a}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -193,7 +264,7 @@ function Index() {
             </p>
             <div className="mt-8 flex gap-3">
               <a href="https://www.facebook.com/dzmitry.varats" target="_blank" rel="noreferrer" className="px-5 py-2.5 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Follow on Facebook</a>
-              <a href="https://www.instagram.com/dzmitry.varats" target="_blank" rel="noreferrer" className="px-5 py-2.5 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Instagram</a>
+              <a href="https://www.instagram.com/fight_club_philly?igsh=MWJhMGNkNGEwaDdwbA==" target="_blank" rel="noreferrer" className="px-5 py-2.5 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Instagram</a>
             </div>
             <div className="mt-10 grid grid-cols-3 gap-6 border-t border-border pt-8">
               <div>
@@ -339,7 +410,7 @@ function Index() {
           <div className="flex items-center gap-4 text-xs uppercase tracking-widest">
             <a href="https://www.facebook.com/dzmitry.varats" target="_blank" rel="noreferrer" className="hover:text-blood transition">Facebook</a>
             <span className="text-muted-foreground">·</span>
-            <a href="https://www.instagram.com/dzmitry.varats" target="_blank" rel="noreferrer" className="hover:text-blood transition">Instagram</a>
+            <a href="https://www.instagram.com/fight_club_philly?igsh=MWJhMGNkNGEwaDdwbA==" target="_blank" rel="noreferrer" className="hover:text-blood transition">Instagram</a>
           </div>
           <p className="text-xs uppercase tracking-widest text-muted-foreground">
             © {new Date().getFullYear()} · Huntingdon Valley, PA
