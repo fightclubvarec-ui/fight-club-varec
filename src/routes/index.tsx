@@ -162,7 +162,7 @@ function Index() {
             </p>
             <div className="mt-8 flex gap-4">
               <a href="https://www.facebook.com/dzmitry.varats" target="_blank" rel="noreferrer" className="px-6 py-3 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Facebook</a>
-              <a href="https://www.instagram.com/dzmitry.varats" target="_blank" rel="noreferrer" className="px-6 py-3 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Instagram</a>
+              <a href="https://www.instagram.com/fight_club_philly?igsh=MWJhMGNkNGEwaDdwbA==" target="_blank" rel="noreferrer" className="px-6 py-3 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Instagram</a>
             </div>
           </div>
           <div className="md:col-span-7 relative">
@@ -193,7 +193,7 @@ function Index() {
             </p>
             <div className="mt-8 flex gap-3">
               <a href="https://www.facebook.com/dzmitry.varats" target="_blank" rel="noreferrer" className="px-5 py-2.5 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Follow on Facebook</a>
-              <a href="https://www.instagram.com/dzmitry.varats" target="_blank" rel="noreferrer" className="px-5 py-2.5 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Instagram</a>
+              <a href="https://www.instagram.com/fight_club_philly?igsh=MWJhMGNkNGEwaDdwbA==" target="_blank" rel="noreferrer" className="px-5 py-2.5 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Instagram</a>
             </div>
             <div className="mt-10 grid grid-cols-3 gap-6 border-t border-border pt-8">
               <div>
@@ -339,7 +339,7 @@ function Index() {
           <div className="flex items-center gap-4 text-xs uppercase tracking-widest">
             <a href="https://www.facebook.com/dzmitry.varats" target="_blank" rel="noreferrer" className="hover:text-blood transition">Facebook</a>
             <span className="text-muted-foreground">·</span>
-            <a href="https://www.instagram.com/dzmitry.varats" target="_blank" rel="noreferrer" className="hover:text-blood transition">Instagram</a>
+            <a href="https://www.instagram.com/fight_club_philly?igsh=MWJhMGNkNGEwaDdwbA==" target="_blank" rel="noreferrer" className="hover:text-blood transition">Instagram</a>
           </div>
           <p className="text-xs uppercase tracking-widest text-muted-foreground">
             © {new Date().getFullYear()} · Huntingdon Valley, PA
