@@ -217,10 +217,12 @@ function Index() {
             </div>
             <ul>
               {titles.map((t) => (
-                <li key={t.year + t.org} className="grid grid-cols-12 gap-4 px-6 py-5 border-b border-border last:border-b-0 hover:bg-background/50 transition">
-                  <span className="col-span-2 font-display text-blood text-xl">{t.year}</span>
-                  <span className="col-span-4 text-xs uppercase tracking-widest text-muted-foreground self-center">{t.org}</span>
-                  <span className="col-span-6 text-foreground self-center">{t.title}</span>
+                <li key={t.year + t.org} className="flex items-start gap-5 px-6 py-5 border-b border-border last:border-b-0 hover:bg-background/50 transition">
+                  <span className="font-display text-blood text-xl w-16 shrink-0">{t.year}</span>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-xs uppercase tracking-widest text-muted-foreground">{t.org}</div>
+                    <div className="mt-1 text-foreground">{t.title}</div>
+                  </div>
                 </li>
               ))}
             </ul>
