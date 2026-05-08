@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/wbc-champion.jpg";
+import heroImg from "@/assets/fight-action.jpg";
 import glovesImg from "@/assets/gloves.jpg";
 import kidsImg from "@/assets/kids-class.jpg";
 import bagImg from "@/assets/heavybag.jpg";
@@ -197,14 +197,12 @@ function Index() {
 
       {/* TITLES & ACCOLADES */}
       <section id="titles" className="py-32 md:py-48 max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-12 gap-8 mb-16 items-end">
-          <div className="md:col-span-7">
-            <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">/ Titles & Accolades</span>
-            <h2 className="mt-4 font-display text-5xl md:text-7xl leading-none">
-              A Decade of<br/><span className="text-stroke-blood">Championships.</span>
-            </h2>
-          </div>
-          <p className="md:col-span-5 text-muted-foreground text-lg leading-relaxed">
+        <div className="mb-16">
+          <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">/ Titles & Accolades</span>
+          <h2 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9] break-words">
+            A Decade of <span className="text-stroke-blood">Championships.</span>
+          </h2>
+          <p className="mt-8 max-w-2xl text-muted-foreground text-lg leading-relaxed">
             From IFMA World stages to WBC Muay Thai gold — Coach Dzmitry brings real championship experience to every class.
           </p>
         </div>
