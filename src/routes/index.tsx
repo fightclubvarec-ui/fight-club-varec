@@ -37,6 +37,29 @@ const schedule = [
   { day: "Saturday", classes: ["Open Mat — 10:00 AM", "Self-Defense — 11:30 AM"] },
 ];
 
+const titles = [
+  { year: "2026", org: "WBC Muay Thai", title: "Nai Khanomtom Welterweight Champion" },
+  { year: "2025", org: "Warrior's Cup (WCMT)", title: "Welterweight Champion" },
+  { year: "2024", org: "Warrior's Cup (WCMT)", title: "Welterweight Champion (×2)" },
+  { year: "2019", org: "Golden Fight Tournament", title: "Tournament Champion" },
+  { year: "2015", org: "Top King World Series", title: "-70 kg Tournament Champion" },
+  { year: "2014", org: "W5 Grand Prix", title: "-66 kg Tournament Champion (Kickboxing)" },
+];
+
+const amateur = [
+  "2022 IFMA European Championships -67kg",
+  "2021 IFMA World Championships -67kg",
+  "2019 IFMA World & European Championships -67kg",
+  "2018 / 2017 IFMA World Championships -67kg",
+  "2016 IFMA-EMF European Championships -67kg",
+  "2014 IFMA World & European Championships -63.5kg",
+  "2013 IFMA World & European Championships -63.5kg",
+  "2013 World Combat Games -63.5kg",
+  "2012 / 2011 IFMA European Championships",
+  "2010 IFMA World Championships -60kg",
+  "2008 Power of Scotland — Runner-Up",
+];
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground bg-grain">
