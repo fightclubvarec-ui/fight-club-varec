@@ -9,6 +9,7 @@ import gymBeltsImg from "@/assets/gym-belts.jpg";
 import coachPortraitImg from "@/assets/coach-portrait.jpg";
 import coachBeltImg from "@/assets/coach-belt.jpg";
 import coachStanceImg from "@/assets/coach-stance.jpg";
+import coachKickImg from "@/assets/coach-kick.jpg";
 import bannerImg from "@/assets/banner-programs.jpg";
 
 export const Route = createFileRoute("/")({
@@ -50,7 +51,7 @@ function Index() {
           </a>
           <nav className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-semibold">
             <a href="#programs" className="hover:text-blood transition">Programs</a>
-            <a href="#coach" className="hover:text-blood transition">Coach</a>
+            <a href="#gallery" className="hover:text-blood transition">Gym</a>
             <a href="#reviews" className="hover:text-blood transition">Reviews</a>
             <a href="#contact" className="hover:text-blood transition">Visit</a>
           </nav>
@@ -181,62 +182,14 @@ function Index() {
         </div>
       </section>
 
-      {/* WOMEN'S CLASS */}
-      <section id="womens" className="py-32 md:py-40 max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-12 gap-10 items-center">
-          <div className="md:col-span-6 relative order-2 md:order-1">
-            <div className="absolute -top-3 -left-3 w-full h-full border-2 border-blood" />
-            <img src={gymRingImg} alt="Women's training space at Fight Club Varec Team" loading="lazy" className="relative w-full aspect-[4/5] object-cover" />
-          </div>
-          <div className="md:col-span-6 order-1 md:order-2">
-            <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">/ Women's Class</span>
-            <h2 className="mt-4 font-display text-5xl md:text-6xl leading-[0.95]">
-              Strong.<br/><span className="text-stroke-blood">Skilled.</span><br/>Unshakeable.
-            </h2>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              A dedicated women-only class built around striking fundamentals, conditioning and real self-defense. Beginner-friendly, supportive and seriously fun — no experience needed.
-            </p>
-            <ul className="mt-8 space-y-3 text-sm">
-              <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 bg-blood" /> Women-only environment with female training partners</li>
-              <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 bg-blood" /> Striking technique, fitness conditioning and self-defense</li>
-              <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 bg-blood" /> All levels — first class is free</li>
-            </ul>
-            <a href="#contact" className="mt-8 inline-block px-7 py-3.5 bg-blood text-bone text-xs uppercase tracking-widest font-bold hover:translate-x-1 transition">Try a Free Class →</a>
-          </div>
-        </div>
-      </section>
-
-      {/* COACH — slimmed */}
-      <section id="coach" className="bg-card border-y border-border">
-        <div className="max-w-7xl mx-auto px-6 py-24 md:py-32 grid md:grid-cols-12 gap-12 items-center">
-          <div className="md:col-span-5 relative">
-            <div className="absolute -top-4 -left-4 w-full h-full border-2 border-blood" />
-            <img src={coachPortraitImg} alt="Coach Dzmitry Varats" loading="lazy" className="relative w-full aspect-[4/5] object-cover object-top" />
-          </div>
-          <div className="md:col-span-7">
-            <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">/ The Coach</span>
-            <h2 className="mt-4 font-display text-5xl md:text-7xl leading-none">
-              Dzmitry<br/><span className="text-stroke-blood">Varats.</span>
-            </h2>
-            <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-xl">
-              World champion. Head coach. Every class is tailored, focused and built to bring out your best — whatever your level.
-            </p>
-            <div className="mt-8 flex gap-3">
-              <a href="https://www.facebook.com/dzmitry.varats" target="_blank" rel="noreferrer" className="px-5 py-2.5 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Facebook</a>
-              <a href="https://www.instagram.com/fight_club_philly?igsh=MWJhMGNkNGEwaDdwbA==" target="_blank" rel="noreferrer" className="px-5 py-2.5 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Instagram</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* GALLERY */}
-      <section className="py-32 md:py-48 max-w-7xl mx-auto px-6">
+      <section id="gallery" className="py-32 md:py-48 max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
             <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">/ Inside the Gym</span>
             <h2 className="mt-4 font-display text-5xl md:text-7xl leading-none">Where<br/>You'll Train.</h2>
           </div>
-          <p className="max-w-md text-muted-foreground text-lg">A purpose-built ring, a wall of bags and a community that shows up. Step inside Fight Club Varec Team.</p>
+          <p className="max-w-md text-muted-foreground text-lg">A purpose-built ring, a wall of bags and a community that shows up. Coached by WBC Muay Thai world champion Dzmitry Varats.</p>
         </div>
         <div className="grid md:grid-cols-12 gap-4">
           <div className="md:col-span-7 relative aspect-[4/3] overflow-hidden bg-card group">
@@ -245,11 +198,20 @@ function Index() {
           <div className="md:col-span-5 relative aspect-[4/3] overflow-hidden bg-card group">
             <img src={coachStanceImg} alt="Coach Dzmitry in fighting stance" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
           </div>
-          <div className="md:col-span-5 relative aspect-[4/3] overflow-hidden bg-card group">
-            <img src={gymBeltsImg} alt="Championship belts and ring at the gym" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+          <div className="md:col-span-4 relative aspect-[4/5] overflow-hidden bg-card group">
+            <img src={coachPortraitImg} alt="Coach Dzmitry Varats" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+          </div>
+          <div className="md:col-span-4 relative aspect-[4/5] overflow-hidden bg-card group">
+            <img src={coachBeltImg} alt="Coach Dzmitry with WBC championship belt" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+          </div>
+          <div className="md:col-span-4 relative aspect-[4/5] overflow-hidden bg-card group">
+            <img src={coachKickImg} alt="Coach Dzmitry mid-kick training" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
           </div>
           <div className="md:col-span-7 relative aspect-[4/3] overflow-hidden bg-card group">
-            <img src={gymRingImg} alt="The boxing ring and championship wall at Fight Club Varec Team" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+            <img src={gymRingImg} alt="The boxing ring and championship wall" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+          </div>
+          <div className="md:col-span-5 relative aspect-[4/3] overflow-hidden bg-card group">
+            <img src={gymBeltsImg} alt="Championship belts on display" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" />
           </div>
         </div>
       </section>
