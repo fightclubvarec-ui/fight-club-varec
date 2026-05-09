@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/gym-bags.jpg";
+import heroImg from "@/assets/coach-stance.jpg";
 import glovesImg from "@/assets/gloves.jpg";
 import kidsImg from "@/assets/kids-class.jpg";
 import bagImg from "@/assets/heavybag.jpg";
@@ -51,6 +51,7 @@ function Index() {
           </a>
           <nav className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-semibold">
             <a href="#programs" className="hover:text-blood transition">Programs</a>
+            <a href="#coach" className="hover:text-blood transition">Coach</a>
             <a href="#gallery" className="hover:text-blood transition">Gym</a>
             <a href="#reviews" className="hover:text-blood transition">Reviews</a>
             <a href="#contact" className="hover:text-blood transition">Visit</a>
@@ -63,7 +64,7 @@ function Index() {
 
       {/* HERO */}
       <section id="top" className="relative min-h-[110vh] flex items-end pt-24 overflow-hidden">
-        <img src={heroImg} alt="Inside Fight Club Varec Team — wall of heavy bags" width={1600} height={1200} className="absolute inset-0 w-full h-full object-cover opacity-60" />
+        <img src={heroImg} alt="Coach Dzmitry Varats — WBC Muay Thai world champion" width={1600} height={1200} className="absolute inset-0 w-full h-full object-cover object-top opacity-60" />
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, oklch(0.08 0 0 / 0.55) 0%, oklch(0.08 0 0 / 0.35) 40%, oklch(0.08 0 0 / 0.95) 100%)" }} />
         <div className="absolute top-1/2 right-8 -translate-y-1/2 hidden lg:block writing-vertical">
           <span className="text-[10px] uppercase tracking-[0.4em] text-muted-foreground" style={{ writingMode: "vertical-rl" }}>Huntingdon Valley · PA · Est. Varec Team</span>
@@ -72,13 +73,13 @@ function Index() {
         <div className="relative max-w-7xl mx-auto px-6 pb-28 w-full">
           <div className="flex items-center gap-3 mb-6">
             <span className="h-px w-10 bg-blood" />
-            <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">Huntingdon Valley · PA</span>
+            <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">WBC Muay Thai World Champion</span>
           </div>
           <h1 className="font-display text-[clamp(3.5rem,13vw,14rem)] leading-[0.82] tracking-tighter">
-            The <span className="text-stroke-blood">Fight</span><br/>
-            <span className="text-blood">Gym.</span>
+            Train <span className="text-stroke-blood">With</span><br/>
+            A <span className="text-blood">Champion.</span>
           </h1>
-          <p className="mt-8 text-sm md:text-base uppercase tracking-[0.3em] text-bone/80">Muay Thai · Kickboxing · MMA · BJJ · Women's · Kids</p>
+          <p className="mt-8 text-sm md:text-base uppercase tracking-[0.3em] text-bone/80">Coached by Dzmitry Varats — <span className="text-blood font-bold">WBC Muay Thai Champion</span></p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
             <a href="#contact" className="px-8 py-4 bg-blood text-bone text-sm uppercase tracking-widest font-bold hover:translate-x-1 transition">
               Book a Free Class →
