@@ -1,27 +1,28 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/fight-action.jpg";
+import heroImg from "@/assets/coach-kick.jpg";
 import glovesImg from "@/assets/gloves.jpg";
 import kidsImg from "@/assets/kids-class.jpg";
 import bagImg from "@/assets/heavybag.jpg";
-import coachImg from "@/assets/coach-real.jpg";
-import gymWallImg from "@/assets/gym-wall.jpg";
-import posterImg from "@/assets/poster-coaches.jpg";
+import gymBagsImg from "@/assets/gym-bags.jpg";
+import gymRingImg from "@/assets/gym-ring.jpg";
+import gymBeltsImg from "@/assets/gym-belts.jpg";
+import coachPortraitImg from "@/assets/coach-portrait.jpg";
+import coachBeltImg from "@/assets/coach-belt.jpg";
+import coachStanceImg from "@/assets/coach-stance.jpg";
 import bannerImg from "@/assets/banner-programs.jpg";
-import fightImg from "@/assets/fight-action.jpg";
-import walkoutImg from "@/assets/walkout.jpg";
-import championImg from "@/assets/wbc-champion.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
 const programs = [
-  { tag: "01", title: "Muay Thai", desc: "The art of eight limbs. Punches, elbows, knees and kicks taught by an experienced fighter.", img: glovesImg },
-  { tag: "02", title: "MMA", desc: "Mixed martial arts blending striking, clinch and ground game. Build a complete fighter's toolkit.", img: bannerImg },
-  { tag: "03", title: "Brazilian Jiu-Jitsu", desc: "Leverage, technique and control. Learn to dominate on the ground — gi and no-gi.", img: gymWallImg },
+  { tag: "01", title: "Muay Thai", desc: "The art of eight limbs. Punches, elbows, knees and kicks — taught by a world champion.", img: glovesImg },
+  { tag: "02", title: "MMA", desc: "Striking, clinch and ground game blended into one complete fighter's toolkit.", img: bannerImg },
+  { tag: "03", title: "Brazilian Jiu-Jitsu", desc: "Leverage, technique and control. Dominate on the ground — gi and no-gi.", img: gymBagsImg },
   { tag: "04", title: "Kickboxing", desc: "Sharpen striking, footwork and conditioning. All levels welcome.", img: bagImg },
-  { tag: "05", title: "Kids Program", desc: "Build discipline, confidence and respect. Safe, structured classes for ages 6–14.", img: kidsImg },
-  { tag: "06", title: "Self-Defense & Fitboxing", desc: "Real-world tactics and high-energy conditioning. For every body, every goal.", img: posterImg },
+  { tag: "05", title: "Women's Class", desc: "A welcoming, women-only space to learn striking, build strength and gain real confidence.", img: gymRingImg },
+  { tag: "06", title: "Kids Program", desc: "Discipline, confidence and respect. Safe, structured classes for ages 6–14.", img: kidsImg },
+  { tag: "07", title: "Self-Defense & Fitboxing", desc: "Real-world tactics and high-energy conditioning. For every body, every goal.", img: gymBeltsImg },
 ];
 
 const reviews = [
@@ -32,32 +33,9 @@ const reviews = [
 ];
 
 const schedule = [
-  { day: "Mon / Wed / Fri", classes: ["Adults Muay Thai — 6:00 PM", "Kids — 5:00 PM"] },
-  { day: "Tue / Thu", classes: ["Kickboxing — 6:30 PM", "Sparring — 7:30 PM"] },
+  { day: "Mon / Wed / Fri", classes: ["Kids — 5:00 PM", "Adults Muay Thai — 6:00 PM", "Women's Class — 7:15 PM"] },
+  { day: "Tue / Thu", classes: ["Kickboxing — 6:30 PM", "MMA & BJJ — 7:30 PM"] },
   { day: "Saturday", classes: ["Open Mat — 10:00 AM", "Self-Defense — 11:30 AM"] },
-];
-
-const titles = [
-  { year: "2026", org: "WBC Muay Thai", title: "Nai Khanomtom Welterweight Champion" },
-  { year: "2025", org: "Warrior's Cup (WCMT)", title: "Welterweight Champion" },
-  { year: "2024", org: "Warrior's Cup (WCMT)", title: "Welterweight Champion (×2)" },
-  { year: "2019", org: "Golden Fight Tournament", title: "Tournament Champion" },
-  { year: "2015", org: "Top King World Series", title: "-70 kg Tournament Champion" },
-  { year: "2014", org: "W5 Grand Prix", title: "-66 kg Tournament Champion (Kickboxing)" },
-];
-
-const amateur = [
-  "2022 IFMA European Championships -67kg",
-  "2021 IFMA World Championships -67kg",
-  "2019 IFMA World & European Championships -67kg",
-  "2018 / 2017 IFMA World Championships -67kg",
-  "2016 IFMA-EMF European Championships -67kg",
-  "2014 IFMA World & European Championships -63.5kg",
-  "2013 IFMA World & European Championships -63.5kg",
-  "2013 World Combat Games -63.5kg",
-  "2012 / 2011 IFMA European Championships",
-  "2010 IFMA World Championships -60kg",
-  "2008 Power of Scotland — Runner-Up",
 ];
 
 function Index() {
