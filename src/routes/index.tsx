@@ -9,6 +9,7 @@ import gymBeltsImg from "@/assets/gym-belts.jpg";
 import coachPortraitImg from "@/assets/coach-portrait.jpg";
 import coachBeltImg from "@/assets/coach-belt.jpg";
 import coachStanceImg from "@/assets/coach-stance.jpg";
+import coachKickImg from "@/assets/coach-kick.jpg";
 import bannerImg from "@/assets/banner-programs.jpg";
 
 export const Route = createFileRoute("/")({
