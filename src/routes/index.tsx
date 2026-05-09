@@ -194,42 +194,24 @@ function Index() {
         </div>
       </section>
 
-      {/* COACH */}
+      {/* COACH — slimmed */}
       <section id="coach" className="bg-card border-y border-border">
-        <div className="max-w-7xl mx-auto px-6 py-32 md:py-48 grid md:grid-cols-12 gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-6 py-24 md:py-32 grid md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-5 relative">
             <div className="absolute -top-4 -left-4 w-full h-full border-2 border-blood" />
-            <img src={walkoutImg} alt="Coach Dzmitry Varats walking out before a fight" loading="lazy" className="relative w-full aspect-[4/5] object-cover object-top grayscale hover:grayscale-0 transition duration-700" />
+            <img src={coachPortraitImg} alt="Coach Dzmitry Varats" loading="lazy" className="relative w-full aspect-[4/5] object-cover object-top" />
           </div>
           <div className="md:col-span-7">
-            <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">/ 02 The Coach</span>
+            <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">/ The Coach</span>
             <h2 className="mt-4 font-display text-5xl md:text-7xl leading-none">
               Dzmitry<br/><span className="text-stroke-blood">Varats.</span>
             </h2>
-            <div className="mt-6 inline-flex items-center gap-3 border border-blood px-4 py-2">
-              <span className="text-blood">★</span>
-              <span className="text-xs uppercase tracking-[0.3em] font-bold">WBC Muay Thai · Fighter of the Month</span>
-            </div>
-            <p className="mt-8 text-lg text-muted-foreground leading-relaxed">
-              World champion fighter and head coach. A rare combination of professionalism, deep knowledge and genuine personal involvement. No matter your age, goals, or fitness level — every program is tailored, focused and effective.
+            <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-xl">
+              World champion. Head coach. Every class is tailored, focused and built to bring out your best — whatever your level.
             </p>
             <div className="mt-8 flex gap-3">
-              <a href="https://www.facebook.com/dzmitry.varats" target="_blank" rel="noreferrer" className="px-5 py-2.5 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Follow on Facebook</a>
+              <a href="https://www.facebook.com/dzmitry.varats" target="_blank" rel="noreferrer" className="px-5 py-2.5 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Facebook</a>
               <a href="https://www.instagram.com/fight_club_philly?igsh=MWJhMGNkNGEwaDdwbA==" target="_blank" rel="noreferrer" className="px-5 py-2.5 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Instagram</a>
-            </div>
-            <div className="mt-10 grid grid-cols-3 gap-6 border-t border-border pt-8">
-              <div>
-                <div className="font-display text-4xl text-blood">WC</div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">World Champion</div>
-              </div>
-              <div>
-                <div className="font-display text-4xl text-blood">5.0</div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">Google Rating</div>
-              </div>
-              <div>
-                <div className="font-display text-4xl text-blood">10+</div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">Years Coaching</div>
-              </div>
             </div>
           </div>
         </div>
@@ -239,23 +221,23 @@ function Index() {
       <section className="py-32 md:py-48 max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
-            <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">/ In the Ring</span>
-            <h2 className="mt-4 font-display text-5xl md:text-7xl leading-none">Live<br/>Action.</h2>
+            <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">/ Inside the Gym</span>
+            <h2 className="mt-4 font-display text-5xl md:text-7xl leading-none">Where<br/>You'll Train.</h2>
           </div>
-          <p className="max-w-md text-muted-foreground text-lg">From the Warriors Cup to championship walkouts — moments from coach Dzmitry's competitive career.</p>
+          <p className="max-w-md text-muted-foreground text-lg">A purpose-built ring, a wall of bags and a community that shows up. Step inside Fight Club Varec Team.</p>
         </div>
         <div className="grid md:grid-cols-12 gap-4">
           <div className="md:col-span-7 relative aspect-[4/3] overflow-hidden bg-card group">
-            <img src={fightImg} alt="Dzmitry Varats throwing a high kick at Warriors Cup" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+            <img src={gymBagsImg} alt="Wall of Fairtex heavy bags inside Fight Club Varec Team" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" />
           </div>
           <div className="md:col-span-5 relative aspect-[4/3] overflow-hidden bg-card group">
-            <img src={walkoutImg} alt="Walkout before the fight" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+            <img src={coachStanceImg} alt="Coach Dzmitry in fighting stance" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
           </div>
           <div className="md:col-span-5 relative aspect-[4/3] overflow-hidden bg-card group">
-            <img src={championImg} alt="WBC Muay Thai Fighter of the Month" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+            <img src={gymBeltsImg} alt="Championship belts and ring at the gym" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" />
           </div>
           <div className="md:col-span-7 relative aspect-[4/3] overflow-hidden bg-card group">
-            <img src={coachImg} alt="Inside the gym at Fight Club Varec Team" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+            <img src={gymRingImg} alt="The boxing ring and championship wall at Fight Club Varec Team" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" />
           </div>
         </div>
       </section>
