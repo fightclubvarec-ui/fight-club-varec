@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/gym-bags.jpg";
+import heroImg from "@/assets/coach-stance.jpg";
 import glovesImg from "@/assets/gloves.jpg";
 import kidsImg from "@/assets/kids-class.jpg";
 import bagImg from "@/assets/heavybag.jpg";
@@ -51,6 +51,7 @@ function Index() {
           </a>
           <nav className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-semibold">
             <a href="#programs" className="hover:text-blood transition">Programs</a>
+            <a href="#coach" className="hover:text-blood transition">Coach</a>
             <a href="#gallery" className="hover:text-blood transition">Gym</a>
             <a href="#reviews" className="hover:text-blood transition">Reviews</a>
             <a href="#contact" className="hover:text-blood transition">Visit</a>
@@ -63,7 +64,7 @@ function Index() {
 
       {/* HERO */}
       <section id="top" className="relative min-h-[110vh] flex items-end pt-24 overflow-hidden">
-        <img src={heroImg} alt="Inside Fight Club Varec Team — wall of heavy bags" width={1600} height={1200} className="absolute inset-0 w-full h-full object-cover opacity-60" />
+        <img src={heroImg} alt="Coach Dzmitry Varats — WBC Muay Thai world champion" width={1600} height={1200} className="absolute inset-0 w-full h-full object-cover object-top opacity-60" />
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, oklch(0.08 0 0 / 0.55) 0%, oklch(0.08 0 0 / 0.35) 40%, oklch(0.08 0 0 / 0.95) 100%)" }} />
         <div className="absolute top-1/2 right-8 -translate-y-1/2 hidden lg:block writing-vertical">
           <span className="text-[10px] uppercase tracking-[0.4em] text-muted-foreground" style={{ writingMode: "vertical-rl" }}>Huntingdon Valley · PA · Est. Varec Team</span>
@@ -72,13 +73,13 @@ function Index() {
         <div className="relative max-w-7xl mx-auto px-6 pb-28 w-full">
           <div className="flex items-center gap-3 mb-6">
             <span className="h-px w-10 bg-blood" />
-            <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">Huntingdon Valley · PA</span>
+            <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">WBC Muay Thai World Champion</span>
           </div>
           <h1 className="font-display text-[clamp(3.5rem,13vw,14rem)] leading-[0.82] tracking-tighter">
-            The <span className="text-stroke-blood">Fight</span><br/>
-            <span className="text-blood">Gym.</span>
+            Train <span className="text-stroke-blood">With</span><br/>
+            A <span className="text-blood">Champion.</span>
           </h1>
-          <p className="mt-8 text-sm md:text-base uppercase tracking-[0.3em] text-bone/80">Muay Thai · Kickboxing · MMA · BJJ · Women's · Kids</p>
+          <p className="mt-8 text-sm md:text-base uppercase tracking-[0.3em] text-bone/80">Coached by Dzmitry Varats — <span className="text-blood font-bold">WBC Muay Thai Champion</span></p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
             <a href="#contact" className="px-8 py-4 bg-blood text-bone text-sm uppercase tracking-widest font-bold hover:translate-x-1 transition">
               Book a Free Class →
@@ -151,6 +152,38 @@ function Index() {
         </div>
       </section>
 
+      {/* COACH */}
+      <section id="coach" className="bg-card border-y border-border">
+        <div className="max-w-7xl mx-auto px-6 py-24 md:py-32 grid md:grid-cols-12 gap-12 items-center">
+          <div className="md:col-span-5 relative">
+            <div className="absolute -top-4 -left-4 w-full h-full border-2 border-blood" />
+            <img src={coachBeltImg} alt="Coach Dzmitry Varats with WBC championship belt" loading="lazy" className="relative w-full aspect-[4/5] object-cover object-top" />
+          </div>
+          <div className="md:col-span-7">
+            <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">/ The Coach</span>
+            <h2 className="mt-4 font-display text-5xl md:text-7xl leading-none">
+              Dzmitry<br/><span className="text-stroke-blood">Varats.</span>
+            </h2>
+            <div className="mt-6 inline-flex items-center gap-3 border border-blood px-4 py-2">
+              <span className="text-blood">★</span>
+              <span className="text-xs uppercase tracking-[0.3em] font-bold">WBC Muay Thai · World Champion</span>
+            </div>
+            <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-xl">
+              World champion fighter and head coach. A rare combination of professionalism, deep knowledge and genuine personal involvement — every program is tailored, focused and effective. No matter your level.
+            </p>
+            <div className="mt-8 flex gap-3 flex-wrap">
+              <a href="https://www.facebook.com/dzmitry.varats" target="_blank" rel="noreferrer" className="px-5 py-2.5 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Facebook</a>
+              <a href="https://www.instagram.com/fight_club_philly?igsh=MWJhMGNkNGEwaDdwbA==" target="_blank" rel="noreferrer" className="px-5 py-2.5 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Instagram</a>
+            </div>
+            <div className="mt-10 grid grid-cols-3 gap-6 border-t border-border pt-8">
+              <div><div className="font-display text-4xl text-blood">WC</div><div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">World Champion</div></div>
+              <div><div className="font-display text-4xl text-blood">5.0</div><div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">Google Rating</div></div>
+              <div><div className="font-display text-4xl text-blood">10+</div><div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">Years Coaching</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* THE GYM */}
       <section id="the-gym" className="relative bg-background border-y border-border overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-32">
@@ -165,53 +198,38 @@ function Index() {
               Full-size boxing ring. A wall of Fairtex heavy bags. Mats, pads, and championship belts on the wall — everything you need to train like a fighter, in a space built for it.
             </p>
           </div>
-          <div className="grid md:grid-cols-12 gap-4">
-            <div className="md:col-span-8 relative aspect-[16/10] overflow-hidden bg-card">
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="relative aspect-[4/3] overflow-hidden bg-card md:col-span-2 md:row-span-2 md:aspect-auto">
               <img src={gymBagsImg} alt="Wall of Fairtex heavy bags" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
             </div>
-            <div className="md:col-span-4 relative aspect-[16/10] md:aspect-auto overflow-hidden bg-card">
+            <div className="relative aspect-[4/3] overflow-hidden bg-card">
               <img src={gymRingImg} alt="Boxing ring and championship belts" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
             </div>
-            <div className="md:col-span-12 grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
-              <div className="border border-border p-6 bg-card"><div className="font-display text-4xl text-blood">5,000+</div><div className="text-xs uppercase tracking-widest text-muted-foreground mt-2">Sq Ft Training Floor</div></div>
-              <div className="border border-border p-6 bg-card"><div className="font-display text-4xl text-blood">12+</div><div className="text-xs uppercase tracking-widest text-muted-foreground mt-2">Heavy Bags</div></div>
-              <div className="border border-border p-6 bg-card"><div className="font-display text-4xl text-blood">1</div><div className="text-xs uppercase tracking-widest text-muted-foreground mt-2">Full-Size Ring</div></div>
-              <div className="border border-border p-6 bg-card"><div className="font-display text-4xl text-blood">7</div><div className="text-xs uppercase tracking-widest text-muted-foreground mt-2">Weekly Class Types</div></div>
+            <div className="relative aspect-[4/3] overflow-hidden bg-card">
+              <img src={gymBeltsImg} alt="Championship belts on display" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* GALLERY */}
+      {/* GALLERY — coach in action */}
       <section id="gallery" className="py-32 md:py-48 max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
-            <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">/ Inside the Gym</span>
-            <h2 className="mt-4 font-display text-5xl md:text-7xl leading-none">Where<br/>You'll Train.</h2>
+            <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">/ In Action</span>
+            <h2 className="mt-4 font-display text-5xl md:text-7xl leading-none">Coach<br/>In Motion.</h2>
           </div>
-          <p className="max-w-md text-muted-foreground text-lg">A purpose-built ring, a wall of bags and a community that shows up. Coached by WBC Muay Thai world champion Dzmitry Varats.</p>
+          <p className="max-w-md text-muted-foreground text-lg">Snapshots of Coach Dzmitry training, fighting and earning the gold.</p>
         </div>
-        <div className="grid md:grid-cols-12 gap-4">
-          <div className="md:col-span-7 relative aspect-[4/3] overflow-hidden bg-card group">
-            <img src={gymBagsImg} alt="Wall of Fairtex heavy bags inside Fight Club Varec Team" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="relative aspect-[4/5] overflow-hidden bg-card group">
+            <img src={coachPortraitImg} alt="Coach Dzmitry Varats portrait" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
           </div>
-          <div className="md:col-span-5 relative aspect-[4/3] overflow-hidden bg-card group">
-            <img src={coachStanceImg} alt="Coach Dzmitry in fighting stance" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
-          </div>
-          <div className="md:col-span-4 relative aspect-[4/5] overflow-hidden bg-card group">
-            <img src={coachPortraitImg} alt="Coach Dzmitry Varats" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
-          </div>
-          <div className="md:col-span-4 relative aspect-[4/5] overflow-hidden bg-card group">
-            <img src={coachBeltImg} alt="Coach Dzmitry with WBC championship belt" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
-          </div>
-          <div className="md:col-span-4 relative aspect-[4/5] overflow-hidden bg-card group">
+          <div className="relative aspect-[4/5] overflow-hidden bg-card group">
             <img src={coachKickImg} alt="Coach Dzmitry mid-kick training" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
           </div>
-          <div className="md:col-span-7 relative aspect-[4/3] overflow-hidden bg-card group">
-            <img src={gymRingImg} alt="The boxing ring and championship wall" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" />
-          </div>
-          <div className="md:col-span-5 relative aspect-[4/3] overflow-hidden bg-card group">
-            <img src={gymBeltsImg} alt="Championship belts on display" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+          <div className="relative aspect-[4/5] overflow-hidden bg-card group">
+            <img src={coachStanceImg} alt="Coach Dzmitry in fighting stance" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
           </div>
         </div>
       </section>
