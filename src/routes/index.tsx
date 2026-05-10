@@ -33,40 +33,48 @@ const reviews = [
   { name: "Evgeny Kotin", text: "I've trained with many coaches, but never seen such a rare combination of professionalism, deep knowledge, and genuine personal involvement. The approach is truly individual and effective." },
 ];
 
-const classSchedules: { slug: string; title: string; sessions: { day: string; time: string }[] }[] = [
-  { slug: "mma", title: "MMA", sessions: [
+const classSchedules: { slug: string; title: string; price?: string; sessions: { day: string; time: string; note?: string }[] }[] = [
+  { slug: "mma", title: "MMA", price: "$220 / month", sessions: [
     { day: "Tuesday", time: "5:00 PM" },
     { day: "Thursday", time: "5:00 PM" },
     { day: "Saturday", time: "2:00 PM" },
   ]},
-  { slug: "muay-thai", title: "Muay Thai", sessions: [
+  { slug: "muay-thai", title: "Muay Thai", price: "$220 / month", sessions: [
     { day: "Tuesday", time: "7:00 PM" },
     { day: "Thursday", time: "7:00 PM" },
     { day: "Saturday", time: "12:00 PM" },
   ]},
-  { slug: "kickboxing", title: "Kickboxing", sessions: [
+  { slug: "kickboxing", title: "Kickboxing", price: "$220 / month", sessions: [
     { day: "Tuesday", time: "7:00 PM" },
     { day: "Thursday", time: "7:00 PM" },
     { day: "Saturday", time: "12:00 PM" },
   ]},
-  { slug: "bjj", title: "Brazilian Jiu-Jitsu", sessions: [
+  { slug: "bjj", title: "Brazilian Jiu-Jitsu", price: "$170 / month", sessions: [
     { day: "Wednesday", time: "6:00 PM" },
     { day: "Friday", time: "6:00 PM" },
   ]},
-  { slug: "womens", title: "Women's Fitboxing", sessions: [
+  { slug: "womens", title: "Women's Fitboxing", price: "$220 / month", sessions: [
     { day: "Monday", time: "10:00 AM" },
     { day: "Thursday", time: "10:00 AM" },
     { day: "Wednesday", time: "7:00 PM" },
     { day: "Saturday", time: "1:00 PM" },
   ]},
-  { slug: "kids", title: "Kids — Muay Thai & Kickboxing", sessions: [
-    { day: "Tuesday", time: "6:00 PM" },
-    { day: "Thursday", time: "6:00 PM" },
-    { day: "Saturday", time: "11:00 AM" },
+  { slug: "kids", title: "Kids Program", price: "$220 / month", sessions: [
+    { day: "Tuesday", time: "6:00 PM", note: "Muay Thai" },
+    { day: "Thursday", time: "6:00 PM", note: "Kickboxing" },
+    { day: "Saturday", time: "11:00 AM", note: "Muay Thai & Kickboxing" },
   ]},
-  { slug: "competitive", title: "Competitive Fighters", sessions: [
+  { slug: "competitive", title: "Competitive Fighters", price: "Included with Unlimited", sessions: [
     { day: "Friday — Additional Training", time: "For athletes & competitors" },
   ]},
+];
+
+const membershipOptions = [
+  { name: "Unlimited — All Classes", price: "$300 / month" },
+  { name: "Single Discipline", price: "$220 / month" },
+  { name: "BJJ & Grappling", price: "$170 / month" },
+  { name: "Drop-in Session", price: "$30" },
+  { name: "Private Training", price: "$100 / session" },
 ];
 
 function Index() {
@@ -340,16 +348,21 @@ function Index() {
                 <div key={cls.slug} id={`schedule-${cls.slug}`} className="p-6 md:p-8 scroll-mt-28 target:bg-blood/5">
                   <div className="flex items-baseline justify-between gap-4 mb-4">
                     <h3 className="font-display text-2xl md:text-3xl uppercase">{cls.title}</h3>
-                    <span className="text-[10px] uppercase tracking-widest text-muted-foreground">Weekly</span>
+                    {cls.price && (
+                      <span className="text-xs uppercase tracking-widest text-blood font-bold whitespace-nowrap">{cls.price}</span>
+                    )}
                   </div>
                   <div className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
                     {cls.sessions.map((s, idx) => (
                       <div key={idx} className="flex items-center justify-between gap-4 border-b border-border/50 py-2">
                         <span className="flex items-center gap-3 text-sm">
-                          <span className="w-1.5 h-1.5 bg-blood" />
-                          {s.day}
+                          <span className="w-1.5 h-1.5 bg-blood shrink-0" />
+                          <span>
+                            {s.day}
+                            {s.note && <span className="block text-[11px] uppercase tracking-widest text-muted-foreground">{s.note}</span>}
+                          </span>
                         </span>
-                        <span className="font-display text-blood text-sm">{s.time}</span>
+                        <span className="font-display text-blood text-sm whitespace-nowrap">{s.time}</span>
                       </div>
                     ))}
                   </div>
@@ -359,6 +372,25 @@ function Index() {
             <p className="mt-6 text-sm text-muted-foreground">
               Schedule subject to change. Call ahead to confirm your first class — first session is on us.
             </p>
+
+            <div className="mt-10 border border-border bg-background/80 backdrop-blur p-6 md:p-8">
+              <div className="flex items-baseline justify-between mb-5">
+                <h3 className="font-display text-2xl md:text-3xl uppercase">Membership</h3>
+                <span className="text-[10px] uppercase tracking-widest text-muted-foreground">Pricing</span>
+              </div>
+              <div className="divide-y divide-border/50">
+                {membershipOptions.map((m) => (
+                  <div key={m.name} className="flex items-center justify-between gap-4 py-3">
+                    <span className="text-sm">{m.name}</span>
+                    <span className="font-display text-blood text-sm whitespace-nowrap">{m.price}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5 pt-5 border-t border-border flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 text-xs uppercase tracking-widest">
+                <span className="text-blood font-bold">★ First class free</span>
+                <span className="text-muted-foreground">Family discount · 20% off second member</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
