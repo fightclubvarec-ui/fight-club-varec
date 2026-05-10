@@ -332,16 +332,22 @@ function Index() {
           </div>
 
           <div className="md:col-span-7">
-            <div className="text-xs uppercase tracking-widest text-blood font-bold mb-6">Weekly Schedule</div>
-            <div className="border border-border bg-background/80 backdrop-blur">
-              {schedule.map((s, i) => (
-                <div key={s.day} className={`grid grid-cols-1 md:grid-cols-3 gap-4 p-6 md:p-8 ${i !== schedule.length - 1 ? "border-b border-border" : ""}`}>
-                  <div className="font-display uppercase text-blood">{s.day}</div>
-                  <div className="md:col-span-2 space-y-2">
-                    {s.classes.map((c) => (
-                      <div key={c} className="flex items-center gap-3">
-                        <span className="w-1.5 h-1.5 bg-blood" />
-                        <span>{c}</span>
+            <div className="text-xs uppercase tracking-widest text-blood font-bold mb-6">Class Schedules</div>
+            <div className="border border-border bg-background/80 backdrop-blur divide-y divide-border">
+              {classSchedules.map((cls) => (
+                <div key={cls.slug} id={`schedule-${cls.slug}`} className="p-6 md:p-8 scroll-mt-28 target:bg-blood/5">
+                  <div className="flex items-baseline justify-between gap-4 mb-4">
+                    <h3 className="font-display text-2xl md:text-3xl uppercase">{cls.title}</h3>
+                    <span className="text-[10px] uppercase tracking-widest text-muted-foreground">Weekly</span>
+                  </div>
+                  <div className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+                    {cls.sessions.map((s, idx) => (
+                      <div key={idx} className="flex items-center justify-between gap-4 border-b border-border/50 py-2">
+                        <span className="flex items-center gap-3 text-sm">
+                          <span className="w-1.5 h-1.5 bg-blood" />
+                          {s.day}
+                        </span>
+                        <span className="font-display text-blood text-sm">{s.time}</span>
                       </div>
                     ))}
                   </div>
