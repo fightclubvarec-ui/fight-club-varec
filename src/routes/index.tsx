@@ -33,40 +33,48 @@ const reviews = [
   { name: "Evgeny Kotin", text: "I've trained with many coaches, but never seen such a rare combination of professionalism, deep knowledge, and genuine personal involvement. The approach is truly individual and effective." },
 ];
 
-const classSchedules: { slug: string; title: string; sessions: { day: string; time: string }[] }[] = [
-  { slug: "mma", title: "MMA", sessions: [
+const classSchedules: { slug: string; title: string; price?: string; sessions: { day: string; time: string; note?: string }[] }[] = [
+  { slug: "mma", title: "MMA", price: "$220 / month", sessions: [
     { day: "Tuesday", time: "5:00 PM" },
     { day: "Thursday", time: "5:00 PM" },
     { day: "Saturday", time: "2:00 PM" },
   ]},
-  { slug: "muay-thai", title: "Muay Thai", sessions: [
+  { slug: "muay-thai", title: "Muay Thai", price: "$220 / month", sessions: [
     { day: "Tuesday", time: "7:00 PM" },
     { day: "Thursday", time: "7:00 PM" },
     { day: "Saturday", time: "12:00 PM" },
   ]},
-  { slug: "kickboxing", title: "Kickboxing", sessions: [
+  { slug: "kickboxing", title: "Kickboxing", price: "$220 / month", sessions: [
     { day: "Tuesday", time: "7:00 PM" },
     { day: "Thursday", time: "7:00 PM" },
     { day: "Saturday", time: "12:00 PM" },
   ]},
-  { slug: "bjj", title: "Brazilian Jiu-Jitsu", sessions: [
+  { slug: "bjj", title: "Brazilian Jiu-Jitsu", price: "$170 / month", sessions: [
     { day: "Wednesday", time: "6:00 PM" },
     { day: "Friday", time: "6:00 PM" },
   ]},
-  { slug: "womens", title: "Women's Fitboxing", sessions: [
+  { slug: "womens", title: "Women's Fitboxing", price: "$220 / month", sessions: [
     { day: "Monday", time: "10:00 AM" },
     { day: "Thursday", time: "10:00 AM" },
     { day: "Wednesday", time: "7:00 PM" },
     { day: "Saturday", time: "1:00 PM" },
   ]},
-  { slug: "kids", title: "Kids — Muay Thai & Kickboxing", sessions: [
-    { day: "Tuesday", time: "6:00 PM" },
-    { day: "Thursday", time: "6:00 PM" },
-    { day: "Saturday", time: "11:00 AM" },
+  { slug: "kids", title: "Kids Program", price: "$220 / month", sessions: [
+    { day: "Tuesday", time: "6:00 PM", note: "Muay Thai" },
+    { day: "Thursday", time: "6:00 PM", note: "Kickboxing" },
+    { day: "Saturday", time: "11:00 AM", note: "Muay Thai & Kickboxing" },
   ]},
-  { slug: "competitive", title: "Competitive Fighters", sessions: [
+  { slug: "competitive", title: "Competitive Fighters", price: "Included with Unlimited", sessions: [
     { day: "Friday — Additional Training", time: "For athletes & competitors" },
   ]},
+];
+
+const membershipOptions = [
+  { name: "Unlimited — All Classes", price: "$300 / month" },
+  { name: "Single Discipline", price: "$220 / month" },
+  { name: "BJJ & Grappling", price: "$170 / month" },
+  { name: "Drop-in Session", price: "$30" },
+  { name: "Private Training", price: "$100 / session" },
 ];
 
 function Index() {
