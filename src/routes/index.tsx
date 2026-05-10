@@ -17,13 +17,13 @@ export const Route = createFileRoute("/")({
 });
 
 const programs = [
-  { tag: "01", title: "Muay Thai", desc: "The art of eight limbs. Punches, elbows, knees and kicks — taught by a world champion.", img: glovesImg },
-  { tag: "02", title: "MMA", desc: "Striking, clinch and ground game blended into one complete fighter's toolkit.", img: bannerImg },
-  { tag: "03", title: "Brazilian Jiu-Jitsu", desc: "Leverage, technique and control. Dominate on the ground — gi and no-gi.", img: gymBagsImg },
-  { tag: "04", title: "Kickboxing", desc: "Sharpen striking, footwork and conditioning. All levels welcome.", img: bagImg },
-  { tag: "05", title: "Women's Class", desc: "A welcoming, women-only space to learn striking, build strength and gain real confidence.", img: gymRingImg },
-  { tag: "06", title: "Kids Program", desc: "Discipline, confidence and respect. Safe, structured classes for ages 6–14.", img: kidsImg },
-  { tag: "07", title: "Self-Defense & Fitboxing", desc: "Real-world tactics and high-energy conditioning. For every body, every goal.", img: gymBeltsImg },
+  { tag: "01", title: "Muay Thai", slug: "muay-thai", desc: "The art of eight limbs. Punches, elbows, knees and kicks — taught by a world champion.", img: glovesImg },
+  { tag: "02", title: "MMA", slug: "mma", desc: "Striking, clinch and ground game blended into one complete fighter's toolkit.", img: bannerImg },
+  { tag: "03", title: "Brazilian Jiu-Jitsu", slug: "bjj", desc: "Leverage, technique and control. Dominate on the ground — gi and no-gi.", img: gymBagsImg },
+  { tag: "04", title: "Kickboxing", slug: "kickboxing", desc: "Sharpen striking, footwork and conditioning. All levels welcome.", img: bagImg },
+  { tag: "05", title: "Women's Fitboxing", slug: "womens", desc: "A welcoming, women-only space to learn striking, build strength and gain real confidence.", img: gymRingImg },
+  { tag: "06", title: "Kids Program", slug: "kids", desc: "Discipline, confidence and respect. Safe, structured classes for ages 6–14.", img: kidsImg },
+  { tag: "07", title: "Competitive Fighters", slug: "competitive", desc: "Friday additional training for athletes and competitors preparing for the ring.", img: gymBeltsImg },
 ];
 
 const reviews = [
@@ -33,10 +33,38 @@ const reviews = [
   { name: "Evgeny Kotin", text: "I've trained with many coaches, but never seen such a rare combination of professionalism, deep knowledge, and genuine personal involvement. The approach is truly individual and effective." },
 ];
 
-const schedule = [
-  { day: "Mon / Wed / Fri", classes: ["Kids — 5:00 PM", "Adults Muay Thai — 6:00 PM", "Women's Class — 7:15 PM"] },
-  { day: "Tue / Thu", classes: ["Kickboxing — 6:30 PM", "MMA & BJJ — 7:30 PM"] },
-  { day: "Saturday", classes: ["Open Mat — 10:00 AM", "Self-Defense — 11:30 AM"] },
+const classSchedules: { slug: string; title: string; sessions: { day: string; time: string }[] }[] = [
+  { slug: "mma", title: "MMA", sessions: [
+    { day: "Tuesday & Thursday", time: "5:00 PM" },
+    { day: "Saturday", time: "2:00 PM" },
+  ]},
+  { slug: "muay-thai", title: "Muay Thai", sessions: [
+    { day: "Tuesday & Thursday — Adults", time: "7:00 PM" },
+    { day: "Saturday — Adults", time: "12:00 PM" },
+    { day: "Tuesday & Thursday — Kids", time: "6:00 PM" },
+    { day: "Saturday — Kids", time: "11:00 AM" },
+  ]},
+  { slug: "kickboxing", title: "Kickboxing", sessions: [
+    { day: "Tuesday & Thursday — Adults", time: "7:00 PM" },
+    { day: "Saturday — Adults", time: "12:00 PM" },
+    { day: "Tuesday & Thursday — Kids", time: "6:00 PM" },
+    { day: "Saturday — Kids", time: "11:00 AM" },
+  ]},
+  { slug: "bjj", title: "Brazilian Jiu-Jitsu", sessions: [
+    { day: "Wednesday & Friday", time: "6:00 PM" },
+  ]},
+  { slug: "womens", title: "Women's Fitboxing", sessions: [
+    { day: "Monday & Thursday", time: "10:00 AM" },
+    { day: "Wednesday", time: "7:00 PM" },
+    { day: "Saturday", time: "1:00 PM" },
+  ]},
+  { slug: "kids", title: "Kids Program", sessions: [
+    { day: "Tuesday & Thursday — Muay Thai / Kickboxing", time: "6:00 PM" },
+    { day: "Saturday — Muay Thai / Kickboxing", time: "11:00 AM" },
+  ]},
+  { slug: "competitive", title: "Competitive Fighters", sessions: [
+    { day: "Friday — Additional Training", time: "For athletes & competitors" },
+  ]},
 ];
 
 function Index() {
@@ -126,18 +154,19 @@ function Index() {
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
           {/* big featured */}
-          <a href="#contact" className="group relative md:col-span-7 md:row-span-2 aspect-[4/5] md:aspect-auto overflow-hidden bg-card">
+          <a href={`#schedule-${programs[0].slug}`} className="group relative md:col-span-7 md:row-span-2 aspect-[4/5] md:aspect-auto overflow-hidden bg-card">
             <img src={programs[0].img} alt={programs[0].title} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
             <div className="absolute bottom-0 left-0 p-8 md:p-12">
               <span className="font-display text-xs text-blood">{programs[0].tag} / FLAGSHIP</span>
               <h3 className="font-display text-4xl md:text-6xl mt-2">{programs[0].title}</h3>
               <p className="text-muted-foreground mt-3 max-w-md">{programs[0].desc}</p>
+              <span className="inline-block mt-4 text-xs uppercase tracking-widest text-blood font-bold">View Schedule →</span>
             </div>
           </a>
 
           {programs.slice(1).map((p) => (
-            <a key={p.title} href="#contact" className="group relative md:col-span-5 lg:col-span-5 aspect-[16/10] overflow-hidden bg-card">
+            <a key={p.title} href={`#schedule-${p.slug}`} className="group relative md:col-span-5 lg:col-span-5 aspect-[16/10] overflow-hidden bg-card">
               <img src={p.img} alt={p.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-700" />
               <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent" />
               <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
@@ -145,6 +174,7 @@ function Index() {
                 <div>
                   <h3 className="font-display text-3xl md:text-4xl">{p.title}</h3>
                   <p className="text-muted-foreground mt-2 text-sm max-w-xs">{p.desc}</p>
+                  <span className="inline-block mt-3 text-[10px] uppercase tracking-widest text-blood font-bold">View Schedule →</span>
                 </div>
               </div>
             </a>
@@ -302,16 +332,22 @@ function Index() {
           </div>
 
           <div className="md:col-span-7">
-            <div className="text-xs uppercase tracking-widest text-blood font-bold mb-6">Weekly Schedule</div>
-            <div className="border border-border bg-background/80 backdrop-blur">
-              {schedule.map((s, i) => (
-                <div key={s.day} className={`grid grid-cols-1 md:grid-cols-3 gap-4 p-6 md:p-8 ${i !== schedule.length - 1 ? "border-b border-border" : ""}`}>
-                  <div className="font-display uppercase text-blood">{s.day}</div>
-                  <div className="md:col-span-2 space-y-2">
-                    {s.classes.map((c) => (
-                      <div key={c} className="flex items-center gap-3">
-                        <span className="w-1.5 h-1.5 bg-blood" />
-                        <span>{c}</span>
+            <div className="text-xs uppercase tracking-widest text-blood font-bold mb-6">Class Schedules</div>
+            <div className="border border-border bg-background/80 backdrop-blur divide-y divide-border">
+              {classSchedules.map((cls) => (
+                <div key={cls.slug} id={`schedule-${cls.slug}`} className="p-6 md:p-8 scroll-mt-28 target:bg-blood/5">
+                  <div className="flex items-baseline justify-between gap-4 mb-4">
+                    <h3 className="font-display text-2xl md:text-3xl uppercase">{cls.title}</h3>
+                    <span className="text-[10px] uppercase tracking-widest text-muted-foreground">Weekly</span>
+                  </div>
+                  <div className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+                    {cls.sessions.map((s, idx) => (
+                      <div key={idx} className="flex items-center justify-between gap-4 border-b border-border/50 py-2">
+                        <span className="flex items-center gap-3 text-sm">
+                          <span className="w-1.5 h-1.5 bg-blood" />
+                          {s.day}
+                        </span>
+                        <span className="font-display text-blood text-sm">{s.time}</span>
                       </div>
                     ))}
                   </div>
