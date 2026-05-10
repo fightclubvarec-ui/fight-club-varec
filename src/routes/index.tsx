@@ -17,13 +17,13 @@ export const Route = createFileRoute("/")({
 });
 
 const programs = [
-  { tag: "01", title: "Muay Thai", desc: "The art of eight limbs. Punches, elbows, knees and kicks — taught by a world champion.", img: glovesImg },
-  { tag: "02", title: "MMA", desc: "Striking, clinch and ground game blended into one complete fighter's toolkit.", img: bannerImg },
-  { tag: "03", title: "Brazilian Jiu-Jitsu", desc: "Leverage, technique and control. Dominate on the ground — gi and no-gi.", img: gymBagsImg },
-  { tag: "04", title: "Kickboxing", desc: "Sharpen striking, footwork and conditioning. All levels welcome.", img: bagImg },
-  { tag: "05", title: "Women's Class", desc: "A welcoming, women-only space to learn striking, build strength and gain real confidence.", img: gymRingImg },
-  { tag: "06", title: "Kids Program", desc: "Discipline, confidence and respect. Safe, structured classes for ages 6–14.", img: kidsImg },
-  { tag: "07", title: "Self-Defense & Fitboxing", desc: "Real-world tactics and high-energy conditioning. For every body, every goal.", img: gymBeltsImg },
+  { tag: "01", title: "Muay Thai", slug: "muay-thai", desc: "The art of eight limbs. Punches, elbows, knees and kicks — taught by a world champion.", img: glovesImg },
+  { tag: "02", title: "MMA", slug: "mma", desc: "Striking, clinch and ground game blended into one complete fighter's toolkit.", img: bannerImg },
+  { tag: "03", title: "Brazilian Jiu-Jitsu", slug: "bjj", desc: "Leverage, technique and control. Dominate on the ground — gi and no-gi.", img: gymBagsImg },
+  { tag: "04", title: "Kickboxing", slug: "kickboxing", desc: "Sharpen striking, footwork and conditioning. All levels welcome.", img: bagImg },
+  { tag: "05", title: "Women's Fitboxing", slug: "womens", desc: "A welcoming, women-only space to learn striking, build strength and gain real confidence.", img: gymRingImg },
+  { tag: "06", title: "Kids Program", slug: "kids", desc: "Discipline, confidence and respect. Safe, structured classes for ages 6–14.", img: kidsImg },
+  { tag: "07", title: "Competitive Fighters", slug: "competitive", desc: "Friday additional training for athletes and competitors preparing for the ring.", img: gymBeltsImg },
 ];
 
 const reviews = [
@@ -33,10 +33,38 @@ const reviews = [
   { name: "Evgeny Kotin", text: "I've trained with many coaches, but never seen such a rare combination of professionalism, deep knowledge, and genuine personal involvement. The approach is truly individual and effective." },
 ];
 
-const schedule = [
-  { day: "Mon / Wed / Fri", classes: ["Kids — 5:00 PM", "Adults Muay Thai — 6:00 PM", "Women's Class — 7:15 PM"] },
-  { day: "Tue / Thu", classes: ["Kickboxing — 6:30 PM", "MMA & BJJ — 7:30 PM"] },
-  { day: "Saturday", classes: ["Open Mat — 10:00 AM", "Self-Defense — 11:30 AM"] },
+const classSchedules: { slug: string; title: string; sessions: { day: string; time: string }[] }[] = [
+  { slug: "mma", title: "MMA", sessions: [
+    { day: "Tuesday & Thursday", time: "5:00 PM" },
+    { day: "Saturday", time: "2:00 PM" },
+  ]},
+  { slug: "muay-thai", title: "Muay Thai", sessions: [
+    { day: "Tuesday & Thursday — Adults", time: "7:00 PM" },
+    { day: "Saturday — Adults", time: "12:00 PM" },
+    { day: "Tuesday & Thursday — Kids", time: "6:00 PM" },
+    { day: "Saturday — Kids", time: "11:00 AM" },
+  ]},
+  { slug: "kickboxing", title: "Kickboxing", sessions: [
+    { day: "Tuesday & Thursday — Adults", time: "7:00 PM" },
+    { day: "Saturday — Adults", time: "12:00 PM" },
+    { day: "Tuesday & Thursday — Kids", time: "6:00 PM" },
+    { day: "Saturday — Kids", time: "11:00 AM" },
+  ]},
+  { slug: "bjj", title: "Brazilian Jiu-Jitsu", sessions: [
+    { day: "Wednesday & Friday", time: "6:00 PM" },
+  ]},
+  { slug: "womens", title: "Women's Fitboxing", sessions: [
+    { day: "Monday & Thursday", time: "10:00 AM" },
+    { day: "Wednesday", time: "7:00 PM" },
+    { day: "Saturday", time: "1:00 PM" },
+  ]},
+  { slug: "kids", title: "Kids Program", sessions: [
+    { day: "Tuesday & Thursday — Muay Thai / Kickboxing", time: "6:00 PM" },
+    { day: "Saturday — Muay Thai / Kickboxing", time: "11:00 AM" },
+  ]},
+  { slug: "competitive", title: "Competitive Fighters", sessions: [
+    { day: "Friday — Additional Training", time: "For athletes & competitors" },
+  ]},
 ];
 
 function Index() {
