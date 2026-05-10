@@ -154,18 +154,19 @@ function Index() {
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
           {/* big featured */}
-          <a href="#contact" className="group relative md:col-span-7 md:row-span-2 aspect-[4/5] md:aspect-auto overflow-hidden bg-card">
+          <a href={`#schedule-${programs[0].slug}`} className="group relative md:col-span-7 md:row-span-2 aspect-[4/5] md:aspect-auto overflow-hidden bg-card">
             <img src={programs[0].img} alt={programs[0].title} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
             <div className="absolute bottom-0 left-0 p-8 md:p-12">
               <span className="font-display text-xs text-blood">{programs[0].tag} / FLAGSHIP</span>
               <h3 className="font-display text-4xl md:text-6xl mt-2">{programs[0].title}</h3>
               <p className="text-muted-foreground mt-3 max-w-md">{programs[0].desc}</p>
+              <span className="inline-block mt-4 text-xs uppercase tracking-widest text-blood font-bold">View Schedule →</span>
             </div>
           </a>
 
           {programs.slice(1).map((p) => (
-            <a key={p.title} href="#contact" className="group relative md:col-span-5 lg:col-span-5 aspect-[16/10] overflow-hidden bg-card">
+            <a key={p.title} href={`#schedule-${p.slug}`} className="group relative md:col-span-5 lg:col-span-5 aspect-[16/10] overflow-hidden bg-card">
               <img src={p.img} alt={p.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-700" />
               <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent" />
               <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
@@ -173,6 +174,7 @@ function Index() {
                 <div>
                   <h3 className="font-display text-3xl md:text-4xl">{p.title}</h3>
                   <p className="text-muted-foreground mt-2 text-sm max-w-xs">{p.desc}</p>
+                  <span className="inline-block mt-3 text-[10px] uppercase tracking-widest text-blood font-bold">View Schedule →</span>
                 </div>
               </div>
             </a>
