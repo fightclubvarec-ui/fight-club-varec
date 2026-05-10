@@ -348,16 +348,21 @@ function Index() {
                 <div key={cls.slug} id={`schedule-${cls.slug}`} className="p-6 md:p-8 scroll-mt-28 target:bg-blood/5">
                   <div className="flex items-baseline justify-between gap-4 mb-4">
                     <h3 className="font-display text-2xl md:text-3xl uppercase">{cls.title}</h3>
-                    <span className="text-[10px] uppercase tracking-widest text-muted-foreground">Weekly</span>
+                    {cls.price && (
+                      <span className="text-xs uppercase tracking-widest text-blood font-bold whitespace-nowrap">{cls.price}</span>
+                    )}
                   </div>
                   <div className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
                     {cls.sessions.map((s, idx) => (
                       <div key={idx} className="flex items-center justify-between gap-4 border-b border-border/50 py-2">
                         <span className="flex items-center gap-3 text-sm">
-                          <span className="w-1.5 h-1.5 bg-blood" />
-                          {s.day}
+                          <span className="w-1.5 h-1.5 bg-blood shrink-0" />
+                          <span>
+                            {s.day}
+                            {s.note && <span className="block text-[11px] uppercase tracking-widest text-muted-foreground">{s.note}</span>}
+                          </span>
                         </span>
-                        <span className="font-display text-blood text-sm">{s.time}</span>
+                        <span className="font-display text-blood text-sm whitespace-nowrap">{s.time}</span>
                       </div>
                     ))}
                   </div>
@@ -367,6 +372,25 @@ function Index() {
             <p className="mt-6 text-sm text-muted-foreground">
               Schedule subject to change. Call ahead to confirm your first class — first session is on us.
             </p>
+
+            <div className="mt-10 border border-border bg-background/80 backdrop-blur p-6 md:p-8">
+              <div className="flex items-baseline justify-between mb-5">
+                <h3 className="font-display text-2xl md:text-3xl uppercase">Membership</h3>
+                <span className="text-[10px] uppercase tracking-widest text-muted-foreground">Pricing</span>
+              </div>
+              <div className="divide-y divide-border/50">
+                {membershipOptions.map((m) => (
+                  <div key={m.name} className="flex items-center justify-between gap-4 py-3">
+                    <span className="text-sm">{m.name}</span>
+                    <span className="font-display text-blood text-sm whitespace-nowrap">{m.price}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5 pt-5 border-t border-border flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 text-xs uppercase tracking-widest">
+                <span className="text-blood font-bold">★ First class free</span>
+                <span className="text-muted-foreground">Family discount · 20% off second member</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
