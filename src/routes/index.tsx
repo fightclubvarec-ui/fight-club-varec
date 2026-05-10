@@ -35,32 +35,34 @@ const reviews = [
 
 const classSchedules: { slug: string; title: string; sessions: { day: string; time: string }[] }[] = [
   { slug: "mma", title: "MMA", sessions: [
-    { day: "Tuesday & Thursday", time: "5:00 PM" },
+    { day: "Tuesday", time: "5:00 PM" },
+    { day: "Thursday", time: "5:00 PM" },
     { day: "Saturday", time: "2:00 PM" },
   ]},
   { slug: "muay-thai", title: "Muay Thai", sessions: [
-    { day: "Tuesday & Thursday — Adults", time: "7:00 PM" },
-    { day: "Saturday — Adults", time: "12:00 PM" },
-    { day: "Tuesday & Thursday — Kids", time: "6:00 PM" },
-    { day: "Saturday — Kids", time: "11:00 AM" },
+    { day: "Tuesday", time: "7:00 PM" },
+    { day: "Thursday", time: "7:00 PM" },
+    { day: "Saturday", time: "12:00 PM" },
   ]},
   { slug: "kickboxing", title: "Kickboxing", sessions: [
-    { day: "Tuesday & Thursday — Adults", time: "7:00 PM" },
-    { day: "Saturday — Adults", time: "12:00 PM" },
-    { day: "Tuesday & Thursday — Kids", time: "6:00 PM" },
-    { day: "Saturday — Kids", time: "11:00 AM" },
+    { day: "Tuesday", time: "7:00 PM" },
+    { day: "Thursday", time: "7:00 PM" },
+    { day: "Saturday", time: "12:00 PM" },
   ]},
   { slug: "bjj", title: "Brazilian Jiu-Jitsu", sessions: [
-    { day: "Wednesday & Friday", time: "6:00 PM" },
+    { day: "Wednesday", time: "6:00 PM" },
+    { day: "Friday", time: "6:00 PM" },
   ]},
   { slug: "womens", title: "Women's Fitboxing", sessions: [
-    { day: "Monday & Thursday", time: "10:00 AM" },
+    { day: "Monday", time: "10:00 AM" },
+    { day: "Thursday", time: "10:00 AM" },
     { day: "Wednesday", time: "7:00 PM" },
     { day: "Saturday", time: "1:00 PM" },
   ]},
-  { slug: "kids", title: "Kids Program", sessions: [
-    { day: "Tuesday & Thursday — Muay Thai / Kickboxing", time: "6:00 PM" },
-    { day: "Saturday — Muay Thai / Kickboxing", time: "11:00 AM" },
+  { slug: "kids", title: "Kids — Muay Thai & Kickboxing", sessions: [
+    { day: "Tuesday", time: "6:00 PM" },
+    { day: "Thursday", time: "6:00 PM" },
+    { day: "Saturday", time: "11:00 AM" },
   ]},
   { slug: "competitive", title: "Competitive Fighters", sessions: [
     { day: "Friday — Additional Training", time: "For athletes & competitors" },
