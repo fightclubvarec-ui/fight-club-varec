@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/coach-stance.jpg";
 import glovesImg from "@/assets/gloves.jpg";
 import kidsImg from "@/assets/kids-class.jpg";
 import bagImg from "@/assets/heavybag.jpg";
@@ -10,6 +9,7 @@ import coachPortraitImg from "@/assets/coach-portrait.jpg";
 import coachBeltImg from "@/assets/coach-belt.jpg";
 import coachKickImg from "@/assets/coach-kick.jpg";
 import coachFightKickImg from "@/assets/coach-fight-kick.jpg";
+const heroImg = coachFightKickImg;
 import bannerImg from "@/assets/banner-programs.jpg";
 import coachWbcBeltImg from "@/assets/coach-wbc-belt.jpg";
 import coachBeltsStackImg from "@/assets/coach-belts-stack.jpg";
