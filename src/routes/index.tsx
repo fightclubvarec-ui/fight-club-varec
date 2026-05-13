@@ -8,8 +8,8 @@ import gymRingImg from "@/assets/gym-ring.jpg";
 import gymBeltsImg from "@/assets/gym-belts.jpg";
 import coachPortraitImg from "@/assets/coach-portrait.jpg";
 import coachBeltImg from "@/assets/coach-belt.jpg";
-import coachStanceImg from "@/assets/coach-stance.jpg";
 import coachKickImg from "@/assets/coach-kick.jpg";
+import coachFightKickImg from "@/assets/coach-fight-kick.jpg";
 import bannerImg from "@/assets/banner-programs.jpg";
 import coachWbcBeltImg from "@/assets/coach-wbc-belt.jpg";
 import coachBeltsStackImg from "@/assets/coach-belts-stack.jpg";
@@ -309,7 +309,7 @@ function Index() {
             <img src={coachKickImg} alt="Coach Dzmitry mid-kick training" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
           </div>
           <div className="relative aspect-[4/5] overflow-hidden bg-card group">
-            <img src={coachStanceImg} alt="Coach Dzmitry in fighting stance" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+            <img src={coachFightKickImg} alt="Coach Dzmitry landing a kick at Warriors Cup" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
           </div>
         </div>
       </section>
