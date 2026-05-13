@@ -11,6 +11,12 @@ import coachBeltImg from "@/assets/coach-belt.jpg";
 import coachStanceImg from "@/assets/coach-stance.jpg";
 import coachKickImg from "@/assets/coach-kick.jpg";
 import bannerImg from "@/assets/banner-programs.jpg";
+import coachWbcBeltImg from "@/assets/coach-wbc-belt.jpg";
+import coachBeltsStackImg from "@/assets/coach-belts-stack.jpg";
+import coachWarriorsBeltImg from "@/assets/coach-warriors-belt.jpg";
+import jeremiahImg from "@/assets/coach-jeremiah.jpg";
+import maxImg from "@/assets/coach-max.jpg";
+import iraImg from "@/assets/coach-ira.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -75,6 +81,30 @@ const membershipOptions = [
   { name: "BJJ & Grappling", price: "$170 / month" },
   { name: "Drop-in Session", price: "$30" },
   { name: "Private Training", price: "$100 / session" },
+];
+
+const assistantCoaches = [
+  {
+    name: "Jeremiah Wells",
+    role: "BJJ & MMA",
+    img: jeremiahImg,
+    credentials: ["CFFC Champion", "Fights in the UFC", "BJJ Black Belt"],
+    bio: "CFFC champion and active UFC fighter. Brings a high-level BJJ black belt game and pro MMA experience to the mats.",
+  },
+  {
+    name: "Max",
+    role: "MMA",
+    img: maxImg,
+    credentials: ["World MMA Champion (2019)", "World Championship Silver Medalist (2021)", "International Master of Sports", "Pro Record: 6–1"],
+    bio: "World MMA Champion and International Master of Sports. A professional fighter with a 6–1 record who coaches with the same intensity he competes with.",
+  },
+  {
+    name: "Ira",
+    role: "Kickboxing & Conditioning",
+    img: iraImg,
+    credentials: ["Candidate Master of Sports — Kickboxing", "National & International Medalist", "Master of Sports — Rhythmic Gymnastics", "Belarus National Team"],
+    bio: "Candidate Master of Sports in kickboxing and Master of Sports in rhythmic gymnastics — a champion and medalist at national and international competitions, and a former member of the Belarus National Team.",
+  },
 ];
 
 function Index() {
@@ -263,6 +293,15 @@ function Index() {
         </div>
         <div className="grid md:grid-cols-3 gap-4">
           <div className="relative aspect-[4/5] overflow-hidden bg-card group">
+            <img src={coachWbcBeltImg} alt="Coach Dzmitry with WBC Muay Thai championship belt" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+          </div>
+          <div className="relative aspect-[4/5] overflow-hidden bg-card group">
+            <img src={coachWarriorsBeltImg} alt="Coach Dzmitry with Warriors Cup welterweight belt" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+          </div>
+          <div className="relative aspect-[4/5] overflow-hidden bg-card group">
+            <img src={coachBeltsStackImg} alt="Coach Dzmitry holding multiple championship belts" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+          </div>
+          <div className="relative aspect-[4/5] overflow-hidden bg-card group">
             <img src={coachPortraitImg} alt="Coach Dzmitry Varats portrait" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
           </div>
           <div className="relative aspect-[4/5] overflow-hidden bg-card group">
@@ -270,6 +309,49 @@ function Index() {
           </div>
           <div className="relative aspect-[4/5] overflow-hidden bg-card group">
             <img src={coachStanceImg} alt="Coach Dzmitry in fighting stance" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+          </div>
+        </div>
+      </section>
+
+      {/* ASSISTANT COACHES */}
+      <section id="team" className="bg-card border-y border-border">
+        <div className="max-w-7xl mx-auto px-6 py-24 md:py-32">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+            <div>
+              <span className="text-xs uppercase tracking-[0.3em] text-blood font-bold">/ The Team</span>
+              <h2 className="mt-4 font-display text-5xl md:text-7xl leading-none">
+                The Coaching<br/><span className="text-stroke-blood">Roster.</span>
+              </h2>
+            </div>
+            <p className="max-w-md text-muted-foreground text-lg">
+              Behind Coach Dzmitry stands a team of world-class champions — each bringing their own discipline, record and edge to the gym.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {assistantCoaches.map((c) => (
+              <article key={c.name} className="relative bg-background border border-border hover:border-blood transition group flex flex-col">
+                <div className="relative aspect-[4/5] overflow-hidden">
+                  <img src={c.img} alt={`Coach ${c.name}`} loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <span className="text-[10px] uppercase tracking-[0.3em] text-blood font-bold">{c.role}</span>
+                    <h3 className="font-display text-3xl md:text-4xl mt-1">{c.name}</h3>
+                  </div>
+                </div>
+                <div className="p-6 md:p-7 flex-1 flex flex-col gap-5">
+                  <ul className="space-y-2">
+                    {c.credentials.map((cred) => (
+                      <li key={cred} className="flex items-start gap-3 text-sm">
+                        <span className="w-1.5 h-1.5 bg-blood mt-2 shrink-0" />
+                        <span>{cred}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-muted-foreground leading-relaxed text-sm">{c.bio}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
