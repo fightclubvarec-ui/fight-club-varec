@@ -120,6 +120,7 @@ function Index() {
           <nav className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-semibold">
             <a href="#programs" className="hover:text-blood transition">Programs</a>
             <a href="#coach" className="hover:text-blood transition">Coach</a>
+            <a href="#team" className="hover:text-blood transition">Team</a>
             <a href="#gallery" className="hover:text-blood transition">Gym</a>
             <a href="#reviews" className="hover:text-blood transition">Reviews</a>
             <a href="#contact" className="hover:text-blood transition">Visit</a>
