@@ -92,7 +92,7 @@ const assistantCoaches = [
     bio: "CFFC champion and active UFC fighter. Brings a high-level BJJ black belt game and pro MMA experience to the mats.",
   },
   {
-    name: "Max",
+    name: "Max Serheiev",
     role: "MMA",
     img: maxImg,
     credentials: ["World MMA Champion (2019)", "World Championship Silver Medalist (2021)", "International Master of Sports", "Pro Record: 6–1"],
