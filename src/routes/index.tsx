@@ -9,7 +9,8 @@ import coachPortraitImg from "@/assets/coach-portrait.jpg";
 import coachBeltImg from "@/assets/coach-belt.jpg";
 import coachKickImg from "@/assets/coach-kick.jpg";
 import coachFightKickImg from "@/assets/coach-fight-kick.jpg";
-const heroImg = coachFightKickImg;
+import coachHeroImg from "@/assets/coach-hero.jpg";
+const heroImg = coachHeroImg;
 import bannerImg from "@/assets/banner-programs.jpg";
 import coachWbcBeltImg from "@/assets/coach-wbc-belt.jpg";
 import coachBeltsStackImg from "@/assets/coach-belts-stack.jpg";
@@ -301,9 +302,6 @@ function Index() {
           </div>
           <div className="relative aspect-[4/5] overflow-hidden bg-card group">
             <img src={coachBeltsStackImg} alt="Coach Dzmitry holding multiple championship belts" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
-          </div>
-          <div className="relative aspect-[4/5] overflow-hidden bg-card group">
-            <img src={coachPortraitImg} alt="Coach Dzmitry Varats portrait" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
           </div>
           <div className="relative aspect-[4/5] overflow-hidden bg-card group">
             <img src={coachKickImg} alt="Coach Dzmitry mid-kick training" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
