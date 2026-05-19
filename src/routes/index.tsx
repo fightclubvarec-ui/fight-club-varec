@@ -488,7 +488,7 @@ function Index() {
             <span className="font-display text-sm tracking-widest">FIGHT CLUB VAREC TEAM</span>
           </div>
           <div className="flex items-center gap-4 text-xs uppercase tracking-widest">
-            <a href="https://www.facebook.com/dzmitry.varats" target="_blank" rel="noreferrer" className="hover:text-blood transition">Facebook</a>
+            <a href="https://www.instagram.com/fight_club_philly?igsh=MWJhMGNkNGEwaDdwbA==" target="_blank" rel="noreferrer" className="hover:text-blood transition">Facebook</a>
             <span className="text-muted-foreground">·</span>
             <a href="https://www.instagram.com/fight_club_philly?igsh=MWJhMGNkNGEwaDdwbA==" target="_blank" rel="noreferrer" className="hover:text-blood transition">Instagram</a>
           </div>
