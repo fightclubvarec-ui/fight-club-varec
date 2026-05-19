@@ -339,7 +339,7 @@ function Index() {
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
                   <div className="absolute bottom-0 left-0 p-6">
                     <span className="text-[10px] uppercase tracking-[0.3em] text-blood font-bold">{c.role}</span>
-                    <h3 className="font-display text-3xl md:text-4xl mt-1">{c.name}</h3>
+                    <h3 className={`font-display mt-1 ${c.name.length > 10 ? "text-xl md:text-2xl" : "text-3xl md:text-4xl"}`}>{c.name}</h3>
                   </div>
                 </div>
                 <div className="p-6 md:p-7 flex-1 flex flex-col gap-5">
