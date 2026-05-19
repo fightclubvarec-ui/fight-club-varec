@@ -10,6 +10,7 @@ import coachBeltImg from "@/assets/coach-belt.jpg";
 import coachKickImg from "@/assets/coach-kick.jpg";
 import coachFightKickImg from "@/assets/coach-fight-kick.jpg";
 import coachHeroImg from "@/assets/coach-hero.jpg";
+import coachStanceFistsImg from "@/assets/coach-stance-fists.jpg";
 const heroImg = coachHeroImg;
 import bannerImg from "@/assets/banner-programs.jpg";
 import coachWbcBeltImg from "@/assets/coach-wbc-belt.jpg";
@@ -100,7 +101,7 @@ const assistantCoaches = [
     bio: "World MMA Champion and International Master of Sports. A professional fighter with a 6–1 record who coaches with the same intensity he competes with.",
   },
   {
-    name: "Ira",
+    name: "Iryna Nestserava",
     role: "Kickboxing & Conditioning",
     img: iraImg,
     credentials: ["Candidate Master of Sports — Kickboxing", "National & International Medalist", "Master of Sports — Rhythmic Gymnastics", "Belarus National Team"],
