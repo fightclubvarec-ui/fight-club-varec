@@ -310,6 +310,9 @@ function Index() {
           <div className="relative aspect-[4/5] overflow-hidden bg-card group">
             <img src={coachFightKickImg} alt="Coach Dzmitry landing a kick at Warriors Cup" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
           </div>
+          <div className="relative aspect-[4/5] overflow-hidden bg-card group">
+            <img src={coachStanceFistsImg} alt="Coach Dzmitry in fighting stance" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+          </div>
         </div>
       </section>
 
