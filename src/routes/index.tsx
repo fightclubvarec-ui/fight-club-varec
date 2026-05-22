@@ -245,7 +245,7 @@ function Index() {
               World champion fighter and head coach. A rare combination of professionalism, deep knowledge and genuine personal involvement — every program is tailored, focused and effective. No matter your level.
             </p>
             <div className="mt-8 flex gap-3 flex-wrap">
-              <a href="https://www.facebook.com/dzmitry.varats" target="_blank" rel="noreferrer" className="px-5 py-2.5 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Facebook</a>
+              <a href="https://www.facebook.com/share/1KpA1aPif6/?mibextid=wwXIfr" target="_blank" rel="noreferrer" className="px-5 py-2.5 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Facebook</a>
               <a href="https://www.instagram.com/fight_club_philly?igsh=MWJhMGNkNGEwaDdwbA==" target="_blank" rel="noreferrer" className="px-5 py-2.5 border border-border hover:border-blood text-xs uppercase tracking-widest font-bold transition">Instagram</a>
             </div>
             <div className="mt-10 grid grid-cols-3 gap-6 border-t border-border pt-8">
