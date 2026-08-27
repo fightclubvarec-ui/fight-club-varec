@@ -339,7 +339,7 @@ function Index() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {assistantCoaches.map((c) => (
               <article key={c.name} className="relative bg-background border border-border hover:border-blood transition group flex flex-col">
                 <div className="relative aspect-[4/5] overflow-hidden">
@@ -496,8 +496,6 @@ function Index() {
             <span className="font-display text-sm tracking-widest">FIGHT CLUB VAREC TEAM</span>
           </div>
           <div className="flex items-center gap-4 text-xs uppercase tracking-widest">
-            <a href="https://www.instagram.com/fight_club_philly?igsh=MWJhMGNkNGEwaDdwbA==" target="_blank" rel="noreferrer" className="hover:text-blood transition">Facebook</a>
-            <span className="text-muted-foreground">·</span>
             <a href="https://www.instagram.com/fight_club_philly?igsh=MWJhMGNkNGEwaDdwbA==" target="_blank" rel="noreferrer" className="hover:text-blood transition">Instagram</a>
           </div>
           <p className="text-xs uppercase tracking-widest text-muted-foreground">
