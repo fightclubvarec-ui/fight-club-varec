@@ -19,7 +19,7 @@ import coachWarriorsBeltImg from "@/assets/coach-warriors-belt.jpg";
 import jeremiahImg from "@/assets/coach-jeremiah.jpg";
 import maxImg from "@/assets/coach-max.jpg";
 import iraImg from "@/assets/coach-ira.jpg";
-import egorImg from "@/assets/egor-kostychenko.jpg.asset.json";
+import egorAsset from "@/assets/egor-kostychenko.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -111,7 +111,7 @@ const assistantCoaches = [
   {
     name: "Egor Kostychenko",
     role: "MMA",
-    img: egorImg,
+    img: egorAsset.url,
     credentials: ["World MMA Champion (2019)", "World Championship Silver Medalist (2021)", "International Master of Sports", "Professional Fighter", "Professional Record: 6–1"],
     bio: "Professional MMA fighter with a 6–1 record. World champion and international medalist who brings elite competition experience to every class.",
   },
