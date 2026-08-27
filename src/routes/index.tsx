@@ -19,6 +19,7 @@ import coachWarriorsBeltImg from "@/assets/coach-warriors-belt.jpg";
 import jeremiahImg from "@/assets/coach-jeremiah.jpg";
 import maxImg from "@/assets/coach-max.jpg";
 import iraImg from "@/assets/coach-ira.jpg";
+import egorAsset from "@/assets/egor-kostychenko.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -97,7 +98,7 @@ const assistantCoaches = [
     name: "Max Serheiev",
     role: "MMA",
     img: maxImg,
-    credentials: ["World MMA Champion (2019)", "World Championship Silver Medalist (2021)", "International Master of Sports", "Pro Record: 6–1"],
+    credentials: ["Master of Sports in MMA, Pankration, and Grappling", "Black Belt in Judo", "Purple Belt in Jiu-Jitsu", "World Champion in MMA and Pankration"],
     bio: "World MMA Champion and International Master of Sports. A professional fighter with a 6–1 record who coaches with the same intensity he competes with.",
   },
   {
@@ -106,6 +107,13 @@ const assistantCoaches = [
     img: iraImg,
     credentials: ["Candidate Master of Sports — Kickboxing", "National & International Medalist", "Master of Sports — Rhythmic Gymnastics", "Belarus National Team"],
     bio: "Candidate Master of Sports in kickboxing and Master of Sports in rhythmic gymnastics — a champion and medalist at national and international competitions, and a former member of the Belarus National Team.",
+  },
+  {
+    name: "Egor Kostychenko",
+    role: "MMA",
+    img: egorAsset.url,
+    credentials: ["World MMA Champion (2019)", "World Championship Silver Medalist (2021)", "International Master of Sports", "Professional Fighter", "Professional Record: 6–1"],
+    bio: "Professional MMA fighter with a 6–1 record. World champion and international medalist who brings elite competition experience to every class.",
   },
 ];
 
